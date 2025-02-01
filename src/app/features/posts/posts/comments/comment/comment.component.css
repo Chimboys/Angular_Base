@@ -1,0 +1,46 @@
+/* Hover effect for comment cards */
+
+
+/* Comment author (name) styling */
+.comment-author {
+  display: block;
+  font-size: 1.1em;
+  color: #444; /* Darker text color for better contrast */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Comment email styling */
+.comment-email {
+  display: block;
+  font-size: 0.9em;
+  color: #666; /* Slightly darker gray for email */
+  margin-bottom: 10px;
+}
+
+/* Comment text (body) styling */
+.comment-text {
+  font-size: 0.95em;
+  color: #555; /* Dark gray for body text */
+  line-height: 1.5;
+  margin: 0;
+}
+@media (max-width: 600px) {
+
+  .comment-card {
+    padding: 10px;
+    margin-bottom: 15px; /* Slightly less space on smaller screens */
+  }
+
+  .comment-author {
+    font-size: 1em;
+  }
+
+  .comment-email {
+    font-size: 0.85em;
+  }
+
+  .comment-text {
+    font-size: 0.9em;
+  }
+}

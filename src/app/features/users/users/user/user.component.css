@@ -1,0 +1,46 @@
+.user-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 90%; /* Fixed width for better control */
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Ensure the card has a background */
+  margin: 0 auto; /* Center the card horizontally */
+}
+.user-card-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px; /* Add some padding for smaller screens */
+}
+
+
+.user-card h2 {
+  margin-top: 0;
+}
+
+.user-details {
+  display: flex; /* Use Flexbox for the two-column layout */
+  gap: 16px; /* Space between the two columns */
+  align-items: flex-start; /* Align columns at the top */
+}
+
+.contact-info, .address {
+  flex: 1; /* Each column takes up 50% of the width */
+  min-width: 0; /* Prevent flex items from overflowing */
+}
+
+.contact-info p, .address p {
+  margin: 8px 0; /* Add spacing between paragraphs */
+}
+
+.address {
+  padding-top: 0; /* Remove padding-top since it's now in a column */
+  border-top: none; /* Remove the border-top */
+}
+
+.address h3 {
+  margin-top: 0; /* Align the Address heading with the Email */
+}

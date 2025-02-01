@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+/* Goal list styles */
+.goal_list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  gap: 10px; /* Adds space between list items */
+}
+
+.goal_list li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 0 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Distributes space evenly */
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.goal_list li:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-5px); /* Adds a slight lift effect on hover */
+  cursor: pointer;
+}

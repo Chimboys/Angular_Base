@@ -1,0 +1,25 @@
+<app-header/>
+
+<div class="user-card-container">
+  <div *ngIf="user" class="user-card">
+    <h2>{{ user.name }}</h2>
+    <div class="user-details">
+      <div class="contact-info">
+
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Phone:</strong> {{ user.phone }}</p>
+        <p><strong>Website:</strong> <a [href]="'http://' + user.website" target="_blank">{{ user.website }}</a></p>
+      </div>
+
+      <div class="address">
+        <h3>Address</h3>
+        <p><strong>Street:</strong> {{ user.address.street }}</p>
+        <p><strong>Suite:</strong> {{ user.address.suite }}</p>
+        <p><strong>City:</strong> {{ user.address.city }}</p>
+        <p><strong>Zipcode:</strong> {{ user.address.zipcode }}</p>
+        <p><strong>Geo Location:</strong> {{ user.address.geo.lat }}, {{ user.address.geo.lng }}</p>
+      </div>
+    </div>
+    <app-posts [posts]="posts"/>
+  </div>
+</div>

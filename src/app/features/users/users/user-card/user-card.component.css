@@ -1,0 +1,13 @@
+.user-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 2px;
+  max-width: 300px; /* Fixed width for each card */
+  width: 100%; /* Ensures cards are responsive */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.user-card h2 {
+  margin-top: 0;
+}

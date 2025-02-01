@@ -1,0 +1,16 @@
+.active {
+  font-weight: bold;
+  background: lightblue;
+}
+
+.nav-span {
+  display: flex;
+  justify-content: space-between; /* Distribute space evenly between items */
+  width: 100%; /* Ensure the span takes up all available width */
+}
+
+.nav-span a {
+  flex-grow: 1; /* Make each link take up equal space */
+  text-align: center; /* Center the text within each link */
+  padding: 10px; /* Add some padding for better spacing */
+}

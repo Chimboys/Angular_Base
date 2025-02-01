@@ -1,0 +1,15 @@
+<!--ngIf is very useful here -->
+<app-header/>
+
+<div *ngIf="post">
+  <div class="post-container">
+    <h1 class="post-title">{{ post.title }}</h1>
+    <p class="post-body">{{ post.body }}</p>
+    <div class="post-metadata">
+      <span class="post-user-id">User ID: {{ post.userId }}</span>
+      <span class="post-id">Post ID: {{ post.id }}</span>
+    </div>
+  </div>
+
+  <app-comments [postId]="post.id"></app-comments>
+</div>
