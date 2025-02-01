@@ -9,15 +9,18 @@ import {Comment} from '../models/comment.model';
   styleUrl: './comments.component.css'
 })
 export class CommentsComponent {
-  @Input({required:true}) postId!:number;
+  @Input() postId:number|null = null;
+
   comments:Comment[] = [];
-  constructor(private _postService : PostService) {
-  }
+  constructor(private _postService : PostService) {}
+
   ngOnInit() { // Correct method name
-    this._postService.getCommentsForPost(this.postId).subscribe((data: Comment[]) => {
-      this.comments = data;
-    });
-  }
+    this._postService.getCommentsForPost(this.postId!).subscribe((data: Comment[]) => {
+        this.comments = data;
+      })
+    }
+
+
 
 
 }

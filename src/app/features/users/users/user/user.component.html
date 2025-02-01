@@ -20,6 +20,20 @@
         <p><strong>Geo Location:</strong> {{ user.address.geo.lat }}, {{ user.address.geo.lng }}</p>
       </div>
     </div>
-    <app-posts [posts]="posts"/>
+
+
+
+    <mat-form-field>
+      <mat-label>Select What to Display</mat-label>
+      <mat-select [(ngModel)]="displayCurrentOption" (selectionChange)="changeOption($event.value)">
+        <mat-option *ngFor="let option of displayOptions | keyvalue" [value]="option.key">
+          {{ option.value }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <app-posts *ngIf="displayCurrentOption === displayOptions.posts" [posts]="posts"/>
+    <p *ngIf="displayCurrentOption === displayOptions.albums"> This Option Will Be Available Soon!</p>
   </div>
 </div>

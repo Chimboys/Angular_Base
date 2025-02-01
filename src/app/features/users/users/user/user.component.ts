@@ -4,6 +4,11 @@ import {UsersService} from '../../user.service';
 import {ActivatedRoute} from '@angular/router';
 import {Post} from '../../../posts/posts/models/post.model';
 
+export enum dataToDisplay {
+  albums = "albums",
+  posts = "posts",
+}
+
 @Component({
   selector: 'app-user',
   standalone: false,
@@ -14,6 +19,8 @@ import {Post} from '../../../posts/posts/models/post.model';
 export class UserComponent {
   @Input() userId : number | null = null;
   posts:Post [] = [];
+  displayCurrentOption: dataToDisplay = dataToDisplay.posts;
+  displayOptions = dataToDisplay //to expose enum to the template
 
   user: User | null = null ;
   constructor(
@@ -32,6 +39,10 @@ export class UserComponent {
       this.posts = params;
       console.log(this.posts);
     })
+  }
+
+  changeOption(option: dataToDisplay) {
+    this.displayCurrentOption = option;
   }
 
   fetchUser(): void {

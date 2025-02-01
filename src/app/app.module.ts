@@ -8,6 +8,8 @@ import {PostsModule} from './features/posts/posts.module';
 import {UsersModule} from './features/users/users.module';
 import {HomeModule} from './features/home/home-module.module';
 import {SharedModule} from './shared/shared.module';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {SharedModule} from './shared/shared.module';
     HomeModule,
     SharedModule,
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

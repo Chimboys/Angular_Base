@@ -11,7 +11,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PostComponent implements OnInit {
   post: Post | null = null; // Initialize as null
-
   constructor(
     private _postService: PostService,
     private _route: ActivatedRoute
@@ -33,4 +32,5 @@ export class PostComponent implements OnInit {
       this.post = post; // Assign the emitted Post object to this.post
     });
   }
+
 }
