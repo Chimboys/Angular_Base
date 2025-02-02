@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {User} from '../../user.model';
 import {UsersService} from '../../user.service';
 import {ActivatedRoute} from '@angular/router';
-import {Post} from '../../../posts/posts/models/post.model';
+import {Post} from '../../../posts/models/post.model';
 
 export enum dataToDisplay {
   albums = "albums",

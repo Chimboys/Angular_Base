@@ -1,6 +1,6 @@
 import {Component, input, Input} from '@angular/core';
-import {Post} from './models/post.model';
-import {PostService} from '../post.service';
+import {Post} from '../../models/post.model';
+import {PostService} from '../../post.service';
 import {Router} from '@angular/router';
 
 @Component({

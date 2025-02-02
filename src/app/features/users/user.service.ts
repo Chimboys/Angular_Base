@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {User} from "./user.model"
-import {Post} from '../posts/posts/models/post.model';
+import {Post} from '../posts/models/post.model';
 @Injectable()
 export class UsersService {
   constructor(private http: HttpClient) { }
